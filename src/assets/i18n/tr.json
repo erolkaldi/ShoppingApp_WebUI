@@ -1,0 +1,22 @@
+{
+    "navbar": {
+        "logOut": "Çıkış",
+        "login": "Giriş",
+        "doLogin": "Giriş yap",
+        "doLogout": "Çıkış yap",
+        "search": "Arama yapın",
+        "menu": "Menü",
+        "myOrders": "Siparişlerim",
+        "becomeSeller": "Shopping App'de satış yapın",
+        "myAccount": "Hesabım"
+    },
+    "login": {
+        "wellcome": "Hoşgeldiniz",
+        "enterCredentials": "Lütfen bilgilerinizi giriniz",
+        "rememberMe": "Beni hatırla",
+        "email": "E-posta",
+        "password": "Şifre",
+        "enter":"Giriş yap",
+        "registerHere":"Hesabınız yok mu ? Buradan kaydolun"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "navbar": {
+        "logOut": "Logout",
+        "login": "Login",
+        "doLogin": "Sign in",
+        "doLogout": "Log out",
+        "search": "Type to Search",
+        "menu": "Menu",
+        "myOrders": "My Orders",
+        "becomeSeller": "Become a seller at Shopping App",
+        "myAccount": "My Account"
+    },
+    "login": {
+        "wellcome": "Wellcome",
+        "enterCredentials": "Please enter your credentials",
+        "rememberMe": "Remember me",
+        "email": "E-mail",
+        "password": "Password",
+        "enter": "Enter",
+        "registerHere":"Don't have an account? Register here"
+    }
+}

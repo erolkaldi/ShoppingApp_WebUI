@@ -1,0 +1,30 @@
+
+<mat-toolbar color="primary">
+    <img class="showhover narrowhide" src="../../../../assets/logo.png" style="padding-right:10px" (click)="goToHome()">
+     <div style="font-size: 12px;min-width: 30%;margin-left: 20px;"><mat-form-field appearance="outline" style="width: 100%;">
+      <input type="search" matInput placeholder="{{'navbar.search' | transloco}}">
+      <mat-icon class="showhover" matSuffix>search</mat-icon>
+    </mat-form-field></div>
+   
+    <button mat-button class="narrowhide">{{'navbar.myOrders' | transloco}}</button>
+    <button mat-button class="narrowhide">{{'navbar.becomeSeller' | transloco}}</button>
+    <span class="spacer"></span>
+    
+    <button mat-button [matMenuTriggerFor]="menu" style="line-height: 15px;" ><mat-icon [style.color]="loggedIn ? 'green' : 'white'">account_circle</mat-icon><div style="font-size:smaller" [style.color]="loggedIn ? 'green' : 'white'">{{'navbar.myAccount' | transloco}}</div></button>
+      <mat-menu #menu="matMenu">
+      <button mat-menu-item *ngIf="!loggedIn" (click)="doLogin()"><mat-icon>login</mat-icon>{{'navbar.doLogin' | transloco}}</button>
+      <button mat-menu-item *ngIf="loggedIn" (click)="doLogout()"><mat-icon>logout</mat-icon>{{'navbar.doLogout' | transloco}}</button>
+      <button mat-menu-item class="widehide">{{'navbar.myOrders' | transloco}}</button>
+      <button mat-menu-item class="widehide">{{'navbar.becomeSeller' | transloco}}</button>
+</mat-menu>
+<mat-form-field appearance="outline" style="width: 70px;font-size: small;max-height: fit-content;">
+  <mat-select [(value)]="selectedLang" (selectionChange)="setActiveLang()">
+    <mat-option value='tr'>
+      TR
+    </mat-option>
+    <mat-option value='en'>
+      EN
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+   </mat-toolbar>
