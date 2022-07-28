@@ -33,7 +33,7 @@ doLogin(){
        }
        else{
         this.storage.setString('accessToken',response.accessToken);
-        this.storage.setBoolean('accessToken',this.rememberMe);
+        this.storage.setBoolean('rememberMe',this.rememberMe);
         if(this.rememberMe){
           this.storage.setString('email',this.loginDto.email);
         this.storage.setString('password',this.loginDto.password);

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { OfferDto } from 'src/app/models/offers/OfferDto';
+import { OfferService } from 'src/app/services/offer/offer.service';
 
 @Component({
   selector: 'app-offer-section',
@@ -7,10 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OfferSectionComponent implements OnInit {
 
-  constructor() { }
-  aaa:string='Erol';
-  bbb:string='Kaldı';
+  constructor(private offerService:OfferService) { }
+ offers:OfferDto[];
   ngOnInit(): void {
+    this.offerService.getActiveOffers().subscribe((response) => {
+      this.offers=response;
+      }
+    );
   }
 
 }

@@ -17,7 +17,8 @@ export class AuthInterceptor implements HttpInterceptor {
   constructor(private _authService:AuthService,private _ngxLoader: NgxUiLoaderService) {}
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    this._ngxLoader.start();
+    if(request.url.includes('http')){
+      this._ngxLoader.start();
     const token = localStorage.getItem("accessToken");
     let headers: HttpHeaders = new HttpHeaders();
     headers = headers.append('Content-Type', 'application/json');
@@ -42,5 +43,9 @@ export class AuthInterceptor implements HttpInterceptor {
 
           })
       );
+    }
+    else{
+      return next.handle(request);
+    }
   }
 }

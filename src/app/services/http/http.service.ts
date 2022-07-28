@@ -11,9 +11,10 @@ export class HttpService {
   apiAddress: string = environment.apiUrl;
     constructor(private httpClient: HttpClient) { }
 
-    get(url: string): Promise<any> {
+    get(url: string): Observable<any> {
         const fullUrl: string = this.apiAddress + url;
-        return this.httpClient.get<Promise<any>>(fullUrl).toPromise();
+       
+        return this.httpClient.get<Promise<any>>(fullUrl);
     }
 
     post(url: string, body: any): Observable<any> {

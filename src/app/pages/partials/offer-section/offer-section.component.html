@@ -1,6 +1,4 @@
 
 <div>
-<app-offer-item [title]="aaa" [subtitle]="bbb" [imgUrl]="'https://sedna360.s3.eu-central-1.amazonaws.com/Trace/Photos/00608407-d52c-4cb2-98b5-7888d6c5976c.jpeg'"></app-offer-item>
-<app-offer-item [title]="aaa" [subtitle]="bbb" [imgUrl]="'https://sedna360.s3.eu-central-1.amazonaws.com/Trace/Photos/00608407-d52c-4cb2-98b5-7888d6c5976c.jpeg'"></app-offer-item>
-<app-offer-item [title]="aaa" [subtitle]="bbb" [imgUrl]="'https://sedna360.s3.eu-central-1.amazonaws.com/Trace/Photos/00608407-d52c-4cb2-98b5-7888d6c5976c.jpeg'"></app-offer-item>
+<app-offer-item *ngFor="let itm of offers" [title]="itm.title" [subtitle]="itm.description" [imgUrl]="itm.photoUrl"></app-offer-item>
 </div>
